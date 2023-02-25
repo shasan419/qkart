@@ -3,7 +3,7 @@
   "version": "1.4.1",
   "main": "src/index.js",
   "engines": {
-    "node": ">=14.20.1"
+    "node": ">=14.17.5"
   },
   "scripts": {
     "start": "nodemon src/index.js",
