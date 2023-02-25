@@ -15,7 +15,7 @@ import Thanks from "./components/Thanks";
 import ipConfig from "./ipConfig.json";
 
 export const config = {
-  endpoint: `https://qkart-backd.herokuapp.com/v1`,
+  endpoint: `http://${ipConfig.workspaceIp}/v1`,
 };
 
 export default function App(props) {

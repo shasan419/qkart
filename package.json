@@ -1,9 +1,9 @@
 {
-  "name": "qkart_me_backend",
-  "version": "1.4.1",
+  "name": "qkart_backend",
+  "version": "1.0.0",
   "main": "src/index.js",
   "engines": {
-    "node": ">=14.20.1"
+    "node": "*"
   },
   "scripts": {
     "start": "nodemon src/index.js",
