@@ -2,7 +2,6 @@ import { Button } from "antd";
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
-import Header from "./Header"
 
 export default function App() {
   return (

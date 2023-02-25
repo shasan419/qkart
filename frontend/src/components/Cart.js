@@ -269,7 +269,7 @@ export default class Cart extends React.Component {
   refreshCart = async () => {
     const cart = await this.getCart();
 
-    if (cart.cartItems) {
+    if (cart?.cartItems) {
       this.setState({
         items: cart.cartItems.map((item) => ({
           ...item,
@@ -351,7 +351,8 @@ export default class Cart extends React.Component {
           <>
             {/* Display a card view for each product in the cart */}
             {this.state.items.map((item) => (
-              <Card className="cart-item" key={item.productId}>
+              item.quantity != 0 &&
+              (<Card className="cart-item" key={item.productId}>
                 {/* Display product image */}
                 <img
                   className="cart-item-image"
@@ -381,7 +382,7 @@ export default class Cart extends React.Component {
                     {this.getQuantityElement(item)}
                   </div>
                 </div>
-              </Card>
+              </Card>)
             ))}
 
             {/* Display cart summary */}
