@@ -8,13 +8,13 @@ app.use("/users", routes);
 
 
 let server;
-
+mongoose.set("strictQuery", false);
 // TODO: CRIO_TASK_MODULE_UNDERSTANDING_BASICS - Create Mongo connection and get the express app to listen on config.port
 server = mongoose.connect(config.mongoose.url,config.mongoose.options).then(() => {
   logger.info('Database connection successful')
 })
 .catch(err => {
-  logger.info('Database connection error')
+  logger.info('Database connection error',err)
 })
 
 // Start the Node server
