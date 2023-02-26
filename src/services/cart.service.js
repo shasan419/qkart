@@ -170,9 +170,7 @@ const deleteProductFromCart = async (user, productId) => {
       let proID = data.cartItems[i].product._id.toString();
       let delID = data.cartItems[i]._id;
       if(proID === productId){
-        await Cart.findOneAndUpdate({email:user.email},{ $pull: { cartItems: { $elemMatch: { _id:delID } } } },{returnOriginal: false})
-      }else{
-        throw new ApiError(httpStatus.BAD_REQUEST,"Product not in cart")
+        await Cart.findOneAndUpdate({email:user.email},{ $pull: { cartItems: { $elemMatch: { _id:delID } } } },{ returnOriginal: false})
       }
     }
   }

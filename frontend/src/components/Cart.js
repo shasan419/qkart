@@ -351,8 +351,7 @@ export default class Cart extends React.Component {
           <>
             {/* Display a card view for each product in the cart */}
             {this.state.items.map((item) => (
-              item.quantity != 0 &&
-              (<Card className="cart-item" key={item.productId}>
+              <Card className="cart-item" key={item.productId}>
                 {/* Display product image */}
                 <img
                   className="cart-item-image"
@@ -383,7 +382,7 @@ export default class Cart extends React.Component {
                   </div>
                 </div>
               </Card>)
-            ))}
+            )}
 
             {/* Display cart summary */}
             <div className="total">
